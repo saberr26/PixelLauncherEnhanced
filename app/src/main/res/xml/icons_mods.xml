@@ -47,7 +47,7 @@
     </com.drdisagree.pixellauncherenhanced.ui.preferences.PreferenceCategory>
 
     <com.drdisagree.pixellauncherenhanced.ui.preferences.PreferenceCategory
-        android:key="xposed_home_screen_general"
+        android:key="xposed_home_screen_icon_colors"
         android:title="@string/section_icon_colors_title"
         app:iconSpaceReserved="false">
 
@@ -55,7 +55,7 @@
             android:key="xposed_themediconcustomcolor"
             android:title="@string/custom_themed_icon_color_title"
             app:iconSpaceReserved="false" />
-
+        
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
             android:defaultValue="0xff000000"
             android:dependency="xposed_themediconcustomcolor"
@@ -66,6 +66,21 @@
             app:cpv_showAlphaSlider="true"
             app:iconSpaceReserved="false" />
 
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="themed_icon_fg_light_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="themed_icon_fg_light_monet_role"
+            android:title="@string/monet_role_title"
+            app:iconSpaceReserved="false" />
+        
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
             android:defaultValue="0xffffffff"
             android:dependency="xposed_themediconcustomcolor"
@@ -74,6 +89,21 @@
             app:cpv_allowPresets="false"
             app:cpv_dialogType="custom"
             app:cpv_showAlphaSlider="true"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="themed_icon_bg_light_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="themed_icon_bg_light_monet_role"
+            android:title="@string/monet_role_title"
             app:iconSpaceReserved="false" />
 
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
@@ -86,6 +116,21 @@
             app:cpv_showAlphaSlider="true"
             app:iconSpaceReserved="false" />
 
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="folder_light_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="folder_light_monet_role"
+            android:title="@string/monet_role_title"
+            app:iconSpaceReserved="false" />
+        
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
             android:defaultValue="0xffffffff"
             android:dependency="xposed_themediconcustomcolor"
@@ -94,6 +139,21 @@
             app:cpv_allowPresets="false"
             app:cpv_dialogType="custom"
             app:cpv_showAlphaSlider="true"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="themed_icon_fg_dark_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="themed_icon_fg_dark_monet_role"
+            android:title="@string/monet_role_title"
             app:iconSpaceReserved="false" />
 
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
@@ -106,6 +166,21 @@
             app:cpv_showAlphaSlider="true"
             app:iconSpaceReserved="false" />
 
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="themed_icon_bg_dark_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="themed_icon_bg_dark_monet_role"
+            android:title="@string/monet_role_title"
+            app:iconSpaceReserved="false" />
+
         <com.drdisagree.pixellauncherenhanced.ui.preferences.ColorPreference
             android:defaultValue="0xff000000"
             android:dependency="xposed_themediconcustomcolor"
@@ -114,6 +189,21 @@
             app:cpv_allowPresets="false"
             app:cpv_dialogType="custom"
             app:cpv_showAlphaSlider="true"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:key="folder_dark_use_monet"
+            android:summary="@string/use_monet_role_desc"
+            android:title="@string/use_monet_role_title"
+            app:iconSpaceReserved="false" />
+
+        <com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+            android:dependency="xposed_themediconcustomcolor"
+            android:entries="@array/monet_color_roles"
+            android:entryValues="@array/monet_color_role_values"
+            android:key="folder_dark_monet_role"
+            android:title="@string/monet_role_title"
             app:iconSpaceReserved="false" />
 
     </com.drdisagree.pixellauncherenhanced.ui.preferences.PreferenceCategory>
