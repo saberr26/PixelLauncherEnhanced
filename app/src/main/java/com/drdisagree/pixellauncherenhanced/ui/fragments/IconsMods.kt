@@ -1,11 +1,11 @@
 package com.drdisagree.pixellauncherenhanced.ui.fragments
 
-import androidx.preference.ListPreference
-import androidx.preference.SwitchPreference
 import com.drdisagree.pixellauncherenhanced.R
 import com.drdisagree.pixellauncherenhanced.data.common.Constants.THEMED_ICON_CUSTOM_COLOR
 import com.drdisagree.pixellauncherenhanced.data.config.RPrefs
 import com.drdisagree.pixellauncherenhanced.ui.base.ControlledPreferenceFragmentCompat
+import com.drdisagree.pixellauncherenhanced.ui.preferences.ListPreference
+import com.drdisagree.pixellauncherenhanced.ui.preferences.SwitchPreference
 import com.drdisagree.pixellauncherenhanced.utils.LauncherUtils.restartLauncher
 
 class IconsMods : ControlledPreferenceFragmentCompat() {
@@ -27,7 +27,7 @@ class IconsMods : ControlledPreferenceFragmentCompat() {
 
     override fun updateScreen(key: String?) {
         super.updateScreen(key)
-
+        
         when (key) {
             THEMED_ICON_CUSTOM_COLOR -> {
                 if (!RPrefs.getBoolean(THEMED_ICON_CUSTOM_COLOR)) {
@@ -35,7 +35,7 @@ class IconsMods : ControlledPreferenceFragmentCompat() {
                 }
             }
         }
-        
+
         val monetPairs = listOf(
             "themed_icon_fg_light_use_monet"  to "themed_icon_fg_light_monet_role",
             "themed_icon_bg_light_use_monet"  to "themed_icon_bg_light_monet_role",
