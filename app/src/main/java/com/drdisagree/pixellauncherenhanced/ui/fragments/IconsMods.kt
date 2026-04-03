@@ -1,5 +1,7 @@
 package com.drdisagree.pixellauncherenhanced.ui.fragments
 
+import androidx.preference.ListPreference
+import androidx.preference.SwitchPreference
 import com.drdisagree.pixellauncherenhanced.R
 import com.drdisagree.pixellauncherenhanced.data.common.Constants.THEMED_ICON_CUSTOM_COLOR
 import com.drdisagree.pixellauncherenhanced.data.config.RPrefs
@@ -32,6 +34,21 @@ class IconsMods : ControlledPreferenceFragmentCompat() {
                     context?.restartLauncher()
                 }
             }
+        }
+        
+        val monetPairs = listOf(
+            "themed_icon_fg_light_use_monet"  to "themed_icon_fg_light_monet_role",
+            "themed_icon_bg_light_use_monet"  to "themed_icon_bg_light_monet_role",
+            "folder_light_use_monet"          to "folder_light_monet_role",
+            "themed_icon_fg_dark_use_monet"   to "themed_icon_fg_dark_monet_role",
+            "themed_icon_bg_dark_use_monet"   to "themed_icon_bg_dark_monet_role",
+            "folder_dark_use_monet"           to "folder_dark_monet_role",
+        )
+
+        monetPairs.forEach { (toggleKey, listKey) ->
+            val toggle = findPreference<SwitchPreference>(toggleKey)
+            val list   = findPreference<ListPreference>(listKey)
+            list?.isEnabled = toggle?.isChecked == true
         }
     }
 }
